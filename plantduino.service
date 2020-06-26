@@ -1,0 +1,10 @@
+[Unit]
+Description=Plantduino
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/home/pi/go/src/Plantduino/plantduino > /home/pi/go/src/Plantduino/plantduino.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
